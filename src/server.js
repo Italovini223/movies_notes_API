@@ -1,7 +1,8 @@
-const { json } = require('express');
 const express = require('express');
-
 const app = express();
+
+const routes = require("./routes");
+
 
 const PORT = 3333;
 
