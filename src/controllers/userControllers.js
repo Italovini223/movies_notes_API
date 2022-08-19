@@ -27,6 +27,10 @@ class userControllers {
     });
 
   }
+
+  async update(request, response) {
+
+  }
 }
 
 module.exports = userControllers;
