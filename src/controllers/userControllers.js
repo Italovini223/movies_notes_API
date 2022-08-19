@@ -44,6 +44,11 @@ class userControllers {
     if(!userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id) {
       throw new appError("This email already exists");
     }
+
+    if(!old_password) {
+      throw new appError("Please insert your old password")
+    }
+
     
     
   }
