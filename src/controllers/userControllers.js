@@ -29,7 +29,7 @@ class userControllers {
   }
 
   async update(request, response) {
-    
+    const database = sqliteConnection(); 
   }
 }
 
