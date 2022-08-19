@@ -29,7 +29,16 @@ class userControllers {
   }
 
   async update(request, response) {
-    const database = sqliteConnection(); 
+    const {name, email, password, old_password} = request.body;
+    const {id} = request.params;
+    const database = await sqliteConnection(); 
+
+    const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
+
+    if(!user) {
+      throw new appError("User not found")
+    }
+    
   }
 }
 
