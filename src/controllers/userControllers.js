@@ -45,9 +45,11 @@ class userControllers {
       throw new appError("This email already exists");
     }
 
-    if(!old_password) {
-      throw new appError("Please insert your old password")
+    if(password && !old_password) {
+      throw new appError("Please entry your old password")
     }
+
+    
 
     
     
