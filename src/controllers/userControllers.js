@@ -59,6 +59,16 @@ class userControllers {
 
     const hashedPassword = await hash(password, 8)
 
+    await knex("users").where({id}).update({
+      name,
+      email,
+      password: hashedPassword
+    });
+
+    return response.status(200).json({
+      message: "user information updated successfully"
+    })
+
   }
 }
 
