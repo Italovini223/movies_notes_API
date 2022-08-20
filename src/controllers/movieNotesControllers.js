@@ -27,4 +27,4 @@ class movieNotesControllers {
   }
 }
 
-module.exports = MovieNotesControllers;
+module.exports = movieNotesControllers;
