@@ -19,6 +19,10 @@ class movieNotesControllers {
     });
 
     await knex("tags").insert(tagsInsert);
+
+    return response.status(200).json({
+      message: "note create successfully"
+    })
   }
 }
 
