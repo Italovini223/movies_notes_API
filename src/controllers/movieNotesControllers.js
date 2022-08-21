@@ -27,6 +27,10 @@ class movieNotesControllers {
       message: "note create successfully"
     })
   }
+
+  async show(request, response){
+    
+  } 
 }
 
 module.exports = movieNotesControllers;
