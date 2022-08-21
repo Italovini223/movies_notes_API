@@ -33,6 +33,11 @@ class movieNotesControllers {
 
     const note = await knex("movie_notes").where({id}).first()
     const tags = await knex("tags").where({note_id: id}).orderBy("name")
+
+    return response.json({
+      ...note,
+      tags
+    });
   } 
 }
 
