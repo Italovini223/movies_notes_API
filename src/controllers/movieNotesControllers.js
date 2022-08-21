@@ -29,7 +29,9 @@ class movieNotesControllers {
   }
 
   async show(request, response){
-    
+    const {id} = request.params;
+
+    const note = await knex("movie_notes").where({id}).first()
   } 
 }
 
