@@ -41,7 +41,14 @@ class movieNotesControllers {
   } 
 
   async index(request, response){
-    
+      const {user_id, title, tags} = request.query;
+
+      let notes;
+
+      if(tags){
+        const filteredTags = tags.split(',').map(tag => tag.trim())
+        console.log(filteredTags)
+      }
   }
 }
 
