@@ -39,6 +39,10 @@ class movieNotesControllers {
       tags
     });
   } 
+
+  async index(request, response){
+    
+  }
 }
 
 module.exports = movieNotesControllers;
