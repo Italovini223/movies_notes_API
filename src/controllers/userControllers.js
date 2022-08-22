@@ -75,6 +75,11 @@ class userControllers {
     })
 
   }
+
+  
+  async delete(request, response){
+    
+  }
 }
 
 module.exports = userControllers;
