@@ -86,6 +86,8 @@ class userControllers {
       message: "user deleted"
     });
   }
+
+  
 }
 
 module.exports = userControllers;
