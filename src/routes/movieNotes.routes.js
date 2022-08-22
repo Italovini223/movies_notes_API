@@ -7,6 +7,7 @@ const notesController = new movieNotesControllers();
 notesRouter.get("/", notesController.index);
 notesRouter.post("/:user_id", notesController.create);
 notesRouter.get("/:id", notesController.show);
+notesRouter.delete("/:id", notesController.delete);
 
 
 module.exports = notesRouter;
