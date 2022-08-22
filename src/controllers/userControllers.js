@@ -78,7 +78,13 @@ class userControllers {
 
   
   async delete(request, response){
-    
+    const {id} = request.params;
+
+    await knex("users").where({id}).delete();
+
+    return response.json({
+      message: "user deleted"
+    });
   }
 }
 
