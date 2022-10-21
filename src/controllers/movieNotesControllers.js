@@ -73,7 +73,7 @@ class movieNotesControllers {
 
         return {
           ...note,
-          noteTags
+          tags: noteTags
         }
       });
 
