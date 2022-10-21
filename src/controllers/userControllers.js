@@ -30,10 +30,11 @@ class userControllers {
 
   async update(request, response) {
     const {name, email, password, old_password} = request.body;
-    const {id} = request.params;
+    const user_id = request.user.id
+
     const database = await sqliteConnection(); 
 
-    const user = await database.get("SELECT * FROM users WHERE id = (?)", [id]);
+    const user = await database.get("SELECT * FROM users WHERE id = (?)", [user_id]);
 
     if(!user) {
       throw new appError("User not found");
@@ -64,7 +65,7 @@ class userControllers {
   
 
 
-    await knex("users").where({id}).update({
+    await knex("users").where({id: user_id}).update({
       name: user.name,
       email: user.email,
       password: user.password
@@ -78,9 +79,9 @@ class userControllers {
 
   
   async delete(request, response){
-    const {id} = request.params;
+    const user_id = request.user.id
 
-    await knex("users").where({id}).delete();
+    await knex("users").where({id: user_id}).delete();
 
     return response.json({
       message: "user deleted"
