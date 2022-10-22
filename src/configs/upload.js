@@ -17,7 +17,7 @@ const MULTER = {
   })
 }
 
-nodule.exports = {
+module.exports = {
   TMP_FOLDER, 
   UPLOADS_FOLDER, 
   MULTER
